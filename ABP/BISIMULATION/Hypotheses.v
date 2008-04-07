@@ -37,7 +37,7 @@
 (*                                                                          *)
 (****************************************************************************)
 
-Require Export abp.ABP.BISIMULATION.Protocol.
+Require Export ABP.ABP.BISIMULATION.Protocol.
 
 (****************************************************)
 (* Correcteness of the protocol : general settings  *)

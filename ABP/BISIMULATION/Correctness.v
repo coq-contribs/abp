@@ -39,9 +39,9 @@
 (* Correctness : The protocol is (weakly) equivalent to the process REPEAT  *)
 (****************************************************************************)
 
-Require Import abp.ABP.BISIMULATION.Protocol.
-Require Import abp.ABP.BISIMULATION.Hypotheses.
-Require Import abp.ABP.BISIMULATION.Lemmas.
+Require Import ABP.ABP.BISIMULATION.Protocol.
+Require Import ABP.ABP.BISIMULATION.Hypotheses.
+Require Import ABP.ABP.BISIMULATION.Lemmas.
 
 (* The proof proceeds consists in a mutual co-recursive definitions of
    equivalence for each of the states of the protocol, i.e. 

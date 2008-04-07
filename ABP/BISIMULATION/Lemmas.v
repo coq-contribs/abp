@@ -41,7 +41,7 @@
 (****************************************************************************)
 
 
-Require Export abp.ABP.BISIMULATION.Hypotheses.
+Require Export ABP.ABP.BISIMULATION.Hypotheses.
 
 (*********************)
 (* Unfolding  Lemmas *)

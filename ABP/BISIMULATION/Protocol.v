@@ -41,7 +41,7 @@
 
 Require Export Bool.
 Require Export Streams.
-Require Export abp.ABP.BISIMULATION.Processes.
+Require Export ABP.ABP.BISIMULATION.Processes.
 
 Parameter A : Set.
 

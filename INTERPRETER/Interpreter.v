@@ -15,7 +15,7 @@
 
 
 (* Contribution to the Coq Library   V6.3 (July 1999)                    *)
-Require Import abp.INTERPRETER.Processes.
+Require Import ABP.INTERPRETER.Processes.
 
 
 Section Lists.

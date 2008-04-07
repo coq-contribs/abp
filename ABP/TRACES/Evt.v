@@ -37,7 +37,7 @@
 (*                                                                          *)
 (****************************************************************************)
 
-Require Import abp.ABP.TRACES.Lemmas.
+Require Import ABP.ABP.TRACES.Lemmas.
 
 Lemma Evt3 :
  forall (b : bool) (s : Stream A) (p : Process) (ss : Discourse Channel Act),

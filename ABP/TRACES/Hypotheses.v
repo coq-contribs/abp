@@ -37,7 +37,7 @@
 (*                                                                          *)
 (****************************************************************************)
 
-Require Export abp.ABP.TRACES.Protocol.
+Require Export ABP.ABP.TRACES.Protocol.
 
 (****************************************************)
 (* Correcteness of the protocol : general settings  *)

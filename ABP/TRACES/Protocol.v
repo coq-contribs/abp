@@ -41,7 +41,7 @@
 
 Require Export Bool.
 Require Export Streams.
-Require Export abp.ABP.TRACES.Processes.
+Require Export ABP.ABP.TRACES.Processes.
 
 Parameter A : Set.
 

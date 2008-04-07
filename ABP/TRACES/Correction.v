@@ -37,7 +37,7 @@
 (*                                                                          *)
 (****************************************************************************)
 
-Require Import abp.ABP.TRACES.Hypotheses.
+Require Import ABP.ABP.TRACES.Hypotheses.
 Require Import Evt.
 Require Import Unique.
 
