@@ -40,6 +40,7 @@
 (*   unfolding the states of the protocol.                                  *)
 (****************************************************************************)
 
+Unset Standard Proposition Elimination Names.
 
 Require Export ABP.ABP.BISIMULATION.Hypotheses.
 

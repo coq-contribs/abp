@@ -17,6 +17,7 @@
 (* Contribution to the Coq Library   V6.3 (July 1999)                    *)
 Require Import ABP.INTERPRETER.Processes.
 
+Unset Standard Proposition Elimination Names.
 
 Section Lists.
 Variable A : Set.
