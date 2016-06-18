@@ -346,9 +346,7 @@ rewrite
      | true => SEND (negb b) (tl s)
      | false => SEND b s
      end)).
-injection H2.
-intro.
-rewrite H4.
+injection H2 as ->.
 assumption.
 assumption.
 intro.
@@ -376,9 +374,7 @@ intros P v q b s H.
 rewrite (unfold_SENDING b s).
 intros H2.
 simple inversion H2.
-injection H1.
-intro.
-case H4.
+injection H1 as <-.
 rewrite
  (inj_Tmess lnk1 v0 (b, hd s) p (SENDING b s) c2 lnk2 f
     (fun b1 : bool =>
@@ -387,9 +383,7 @@ rewrite
      | false => SEND b s
      end)).
 rewrite <- H3.
-injection H0.
-intros.
-rewrite H7.
+injection H0 as ? ->.
 assumption.
 assumption.
 discriminate H1.
@@ -440,16 +434,12 @@ intros P v q b s H.
 rewrite (unfold_SEND b s).
 intros H2.
 simple inversion H2.
-injection H1.
-intro.
-case H4.
+injection H1 as <-.
 rewrite
  (inj_Tmess lnk1 v0 (b, hd s) p (SENDING b s) c2 lnk2 f
     (fun b1 : bool => SEND b s)).
 rewrite <- H3.
-injection H0.
-intros.
-rewrite H7.
+injection H0 as ? ->.
 assumption.
 assumption.
 discriminate H1.
@@ -530,9 +520,7 @@ rewrite
  .
 intro.
 rewrite <- H1.
-injection H3.
-intro.
-rewrite H5.
+injection H3 as ->.
 assumption.
 assumption.
 intro.
@@ -609,16 +597,12 @@ intros P v q b H.
 rewrite (unfold_ACK b).
 intros H2.
 simple inversion H2.
-injection H1.
-intro.
-case H4.
+injection H1 as <-.
 rewrite
  (inj_Tmess lnk2 v0 b p (ACKING b) c2 lnk1 f (fun b1 : bool * A => ACK b))
  .
 rewrite <- H3.
-injection H0.
-intros.
-rewrite H7.
+injection H0 as ? ->.
 assumption.
 assumption.
 discriminate H1.
@@ -688,13 +672,9 @@ rewrite unfold_OUT.
 intros H0.
 simple inversion H0.
 rewrite <- H3.
-injection H2.
-intros.
-rewrite <- H4.
+injection H2 as <-.
 rewrite (inj_Tmess del v a p (ACK b) c2 lnk1 f (fun _ : bool * A => OUT b a)).
-injection H1.
-intros.
-rewrite H7.
+injection H1 as ? ->.
 assumption.
 assumption.
 discriminate H3.
