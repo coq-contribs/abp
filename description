@@ -1,7 +1,7 @@
 Name: ABP
 Title: A verification of the alternating bit protocol expressed in CBS
-Author: Eduardo Giménez
-Institution: Ecole Normale Supérieure de Lyon
+Author: Eduardo GimÃ©nez
+Institution: Ecole Normale SupÃ©rieure de Lyon
 Description:
 Keywords: alternating bit protocol, process calculi, reactive systems, co-inductive types, co-induction 
 Category: Computer Science/Concurrent Systems and Protocols/Correctness of specific protocols
