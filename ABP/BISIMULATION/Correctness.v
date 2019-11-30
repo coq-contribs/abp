@@ -96,7 +96,7 @@ Lemma state4 :
  forall (b : bool) (s : Stream A),
  weak_eq Channel Act Trans Silent (SENDING b s || ACK b) (REPEAT (tl s)).
 
-cofix.
+cofix state4.
 (* State IV *)
 intros.
 apply w_eq.

@@ -17,8 +17,6 @@
 (* Contribution to the Coq Library   V6.3 (July 1999)                    *)
 Require Import ABP.INTERPRETER.Processes.
 
-Unset Standard Proposition Elimination Names.
-
 Section Lists.
 Variable A : Set.
 CoInductive List : Set :=
@@ -80,7 +78,7 @@ CoInductive Trace : List Pointer -> Process Chnl A -> Set :=
 Lemma listen :
  forall (p : Process Chnl A) (c : Chnl) (v : A c),
  {q : Process Chnl A | UnrelProcTrans Chnl A c p (Receive _ _ c v) q}.
-fix 1.
+fix listen 1.
 simple destruct p.
 simple destruct g.
 (* It's a TALK process *) 
@@ -126,7 +124,7 @@ Defined.
 
 
 Lemma say : forall (o : Pointer) (p : Process Chnl A), Result o p.   
-fix 1.
+fix say 1.
 simple destruct p.
 simple destruct g.
 case o.
@@ -232,7 +230,7 @@ Defined.
 
 
 Theorem simulator : forall (x : List Pointer) (p : Process Chnl A), Trace x p.
-cofix.
+cofix simulator.
 intros x p.
 case x.
 apply Stop.

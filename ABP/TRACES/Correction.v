@@ -44,7 +44,7 @@ Require Import Unique.
 Lemma correctness_cycle :
  forall (b : bool) (s : Stream A) (p : Process) (d : Discourse Channel Act),
  p = SENDING b s || ACK b -> Equity p d -> InTrace (tl s) p d.
-cofix.
+cofix correctness_cycle.
 intros b s p d H E.
 unfold InTrace in |- *.
 apply palways.
