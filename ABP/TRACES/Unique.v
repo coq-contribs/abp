@@ -56,8 +56,8 @@ intro state3; case state3; auto.
 intro state3; case state3; intros whichc whichq0.
 unfold OneDel in H1.
 absurd
- (existS (Signal Channel Act) c0 w0 =
-  existS (Signal Channel Act) del (Clear Channel Act del (hd s))); 
+ (existT (Signal Channel Act) c0 w0 =
+  existT (Signal Channel Act) del (Clear Channel Act del (hd s))); 
  auto.
 
 intros c0 w0 p0 T H1 whichisp0.

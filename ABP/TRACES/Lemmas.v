@@ -740,8 +740,8 @@ Lemma State1 :
    (q : Process),
  Trans c (SEND b s || ACKING (negb b)) (Transmit _ Act c w) q ->
  c = lnk1 /\ q = SENDING b s || OUT b (hd s) \/
- existS (Signal Channel Act) c w =
- existS (Signal Channel Act) lnk1 (Noise _ Act lnk1) /\
+ existT (Signal Channel Act) c w =
+ existT (Signal Channel Act) lnk1 (Noise _ Act lnk1) /\
  q = SENDING b s || ACKING (negb b).
 
 simple destruct c; simpl in |- *.
@@ -795,8 +795,8 @@ Lemma State2 :
    (q : Process),
  Trans c (SENDING b s || ACKING (negb b)) (Transmit _ Act c w) q ->
  c = lnk1 /\ q = SENDING b s || OUT b (hd s) \/
- existS (Signal Channel Act) c w =
- existS (Signal Channel Act) lnk1 (Noise _ Act lnk1) /\
+ existT (Signal Channel Act) c w =
+ existT (Signal Channel Act) lnk1 (Noise _ Act lnk1) /\
  q = SENDING b s || ACKING (negb b).
 
 simple destruct c; simpl in |- *.
@@ -849,8 +849,8 @@ Lemma State3 :
    (q : Process),
  Trans c (SENDING b s || OUT b (hd s)) (Transmit _ Act c w) q ->
  c = lnk1 /\ q = SENDING b s || OUT b (hd s) \/
- existS (Signal Channel Act) c w =
- existS (Signal Channel Act) del (Clear _ Act del (hd s)) /\
+ existT (Signal Channel Act) c w =
+ existT (Signal Channel Act) del (Clear _ Act del (hd s)) /\
  q = SENDING b s || ACK b.
 simple destruct c; simpl in |- *.
 intros w q T.
@@ -904,8 +904,8 @@ Lemma State4 :
  Trans c (SENDING b s || ACK b) (Transmit _ Act c w) q ->
  c = lnk1 /\ q = SENDING b s || ACK b \/
  c = lnk2 /\ q = SEND (negb b) (tl s) || ACKING b \/
- existS (Signal Channel Act) c w =
- existS (Signal Channel Act) lnk2 (Noise _ Act lnk2) /\
+ existT (Signal Channel Act) c w =
+ existT (Signal Channel Act) lnk2 (Noise _ Act lnk2) /\
  q = SENDING b s || ACKING b.
 
 simple destruct c; simpl in |- *.
@@ -962,8 +962,8 @@ Lemma State5 :
    (q : Process),
  Trans c (SENDING b s || ACKING b) (Transmit _ Act c w) q ->
  c = lnk1 /\ q = SENDING b s || ACK b \/
- existS (Signal Channel Act) c w =
- existS (Signal Channel Act) lnk1 (Noise _ Act lnk1) /\
+ existT (Signal Channel Act) c w =
+ existT (Signal Channel Act) lnk1 (Noise _ Act lnk1) /\
  q = SENDING b s || ACKING b.
 
 simple destruct c; simpl in |- *.

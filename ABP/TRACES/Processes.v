@@ -204,16 +204,16 @@ intros.
 inversion H1.
 apply H7.
 change
-  ((fun cw1 : sigS Signal =>
+  ((fun cw1 : sigT Signal =>
     let (c, w1) return Prop := cw1 in Trans c p (Transmit c w1) q)
-     (existS _ c w1)) in |- *.
+     (existT _ c w1)) in |- *.
 dependent rewrite H3.
 assumption.
 simpl in H0.
 change
-  ((fun cw1 : sigS Signal =>
+  ((fun cw1 : sigT Signal =>
     let (c, w1) return Prop := cw1 in ~ P p (Disc c w1 ss)) 
-     (existS _ c w1)) in |- *.
+     (existT _ c w1)) in |- *.
 dependent rewrite H3.
 assumption.
 Qed.
@@ -234,9 +234,9 @@ intros.
 inversion H0.
 apply H6.
 change
-  ((fun cw1 : sigS Signal =>
+  ((fun cw1 : sigT Signal =>
     let (c, w1) return Prop := cw1 in Trans c p (Transmit c w1) q)
-     (existS _ c w1)) in |- *.
+     (existT _ c w1)) in |- *.
 dependent rewrite H2.
 assumption.
 Defined.

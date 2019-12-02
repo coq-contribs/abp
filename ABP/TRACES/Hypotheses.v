@@ -119,8 +119,8 @@ Inductive Exceptions :
 Process -> forall c : Channel, Signal _ Act c -> Prop :=
   | exep2 :
       forall (b : bool) (s : Stream A) (c : Channel) (w : Signal _ Act c),
-      existS (Signal Channel Act) c w =
-      existS (Signal Channel Act) lnk1 (Noise _ Act lnk1) ->
+      existT (Signal Channel Act) c w =
+      existT (Signal Channel Act) lnk1 (Noise _ Act lnk1) ->
       Exceptions (SENDING b s || ACKING (negb b)) c w
   | exep3 :
       forall (b : bool) (s : Stream A) (c : Channel) (w : Signal _ Act c),
@@ -130,8 +130,8 @@ Process -> forall c : Channel, Signal _ Act c -> Prop :=
       c = lnk1 -> Exceptions (SENDING b s || ACK b) c w
   | exep5 :
       forall (b : bool) (s : Stream A) (c : Channel) (w : Signal _ Act c),
-      existS (Signal Channel Act) c w =
-      existS (Signal Channel Act) lnk2 (Noise _ Act lnk2) ->
+      existT (Signal Channel Act) c w =
+      existT (Signal Channel Act) lnk2 (Noise _ Act lnk2) ->
       Exceptions (SENDING b s || ACK b) c w
   | exep6 :
       forall (b : bool) (s : Stream A) (c : Channel) (w : Signal _ Act c),
@@ -155,8 +155,8 @@ Definition Equity :=
 
 Definition OneDel (a : A) (p : Process) (d1 : Discourse Channel Act) :=
   let (c0, w0, _) := d1 in
-  existS (Signal Channel Act) c0 w0 =
-  existS (Signal Channel Act) del (Clear Channel Act del a).
+  existT (Signal Channel Act) c0 w0 =
+  existT (Signal Channel Act) del (Clear Channel Act del a).
 
 
 Definition InTrace := PAlways Channel Act Trans A OneDel.
